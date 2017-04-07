@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{684FCB96-A6FC-45B4-8BE7-13C03D1F464C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{B76AC3AF-1E8E-4849-9943-67DF77651A6F}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GodSharp.Shared", "src\GodSharp.Shared\GodSharp.Shared.shproj", "{8F6E52F3-DB35-40B8-867A-AD312791BB63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodSharp.Encryption", "src\GodSharp.Encryption\GodSharp.Encryption.csproj", "{778633B1-7023-4975-8028-EB8645CD9BA9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{3889C1B2-746D-40F8-90F3-5F1E819DBFBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodSharp.Encryption.Tests", "test\GodSharp.Encryption.Tests\GodSharp.Encryption.Tests.csproj", "{7DC293CD-50BB-4AAD-AF6E-9CB4DA3A2C8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CA928813-3446-4345-9A90-F4CD5AA4D0CF}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\GodSharp.Shared\GodSharp.Shared.projitems*{8f6e52f3-db35-40b8-867a-ad312791bb63}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{778633B1-7023-4975-8028-EB8645CD9BA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{778633B1-7023-4975-8028-EB8645CD9BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{778633B1-7023-4975-8028-EB8645CD9BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{778633B1-7023-4975-8028-EB8645CD9BA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DC293CD-50BB-4AAD-AF6E-9CB4DA3A2C8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DC293CD-50BB-4AAD-AF6E-9CB4DA3A2C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DC293CD-50BB-4AAD-AF6E-9CB4DA3A2C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DC293CD-50BB-4AAD-AF6E-9CB4DA3A2C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8F6E52F3-DB35-40B8-867A-AD312791BB63} = {3889C1B2-746D-40F8-90F3-5F1E819DBFBB}
+		{778633B1-7023-4975-8028-EB8645CD9BA9} = {684FCB96-A6FC-45B4-8BE7-13C03D1F464C}
+		{3889C1B2-746D-40F8-90F3-5F1E819DBFBB} = {684FCB96-A6FC-45B4-8BE7-13C03D1F464C}
+		{7DC293CD-50BB-4AAD-AF6E-9CB4DA3A2C8B} = {B76AC3AF-1E8E-4849-9943-67DF77651A6F}
+	EndGlobalSection
+EndGlobal

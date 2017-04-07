@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{778633B1-7023-4975-8028-EB8645CD9BA9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GodSharp</RootNamespace>
+    <AssemblyName>GodSharp.Encryption</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GodSharp.Shared\Encryption\Asymmetric\RSA.cs">
+      <Link>Asymmetric\RSA.cs</Link>
+    </Compile>
+    <Compile Include="..\GodSharp.Shared\Encryption\Base64.cs">
+      <Link>Base64.cs</Link>
+    </Compile>
+    <Compile Include="..\GodSharp.Shared\Encryption\Hash\HMAC\HMAC.cs">
+      <Link>Hash\HMAC\HMAC.cs</Link>
+    </Compile>
+    <Compile Include="..\GodSharp.Shared\Encryption\Hash\HMAC\HMACMD5.cs">
+      <Link>Hash\HMAC\HMACMD5.cs</Link>
+    </Compile>
+    <Compile Include="..\GodSharp.Shared\Encryption\Hash\HMAC\HMACRIPEMD160.cs">
+      <Link>Hash\HMAC\HMACRIPEMD160.cs</Link>
+    </Compile>
+    <Compile Include="..\GodSharp.Shared\Encryption\Hash\HMAC\HMACSHA1.cs">
+      <Link>Hash\HMAC\HMACSHA1.cs</Link>
+    </Compile>
+    <Compile Include="..\GodSharp.Shared\Encryption\Hash\HMAC\HMACSHA256.cs">
+      <Link>Hash\HMAC\HMACSHA256.cs</Link>
+    </Compile>
+    <Compile Include="..\GodSharp.Shared\Encryption\Hash\HMAC\HMACSHA384.cs">
+      <Link>Hash\HMAC\HMACSHA384.cs</Link>
+    </Compile>
+    <Compile Include="..\GodSharp.Shared\Encryption\Hash\HMAC\HMACSHA512.cs">
+      <Link>Hash\HMAC\HMACSHA512.cs</Link>
+    </Compile>
+    <Compile Include="..\GodSharp.Shared\Encryption\Hash\MD5.cs">
+      <Link>Hash\MD5.cs</Link>
+    </Compile>
+    <Compile Include="..\GodSharp.Shared\Encryption\Hash\SHA\SHA.cs">
+      <Link>Hash\SHA\SHA.cs</Link>
+    </Compile>
+    <Compile Include="..\GodSharp.Shared\Encryption\Hash\SHA\SHA1.cs">
+      <Link>Hash\SHA\SHA1.cs</Link>
+    </Compile>
+    <Compile Include="..\GodSharp.Shared\Encryption\Hash\SHA\SHA256.cs">
+      <Link>Hash\SHA\SHA256.cs</Link>
+    </Compile>
+    <Compile Include="..\GodSharp.Shared\Encryption\Hash\SHA\SHA384.cs">
+      <Link>Hash\SHA\SHA384.cs</Link>
+    </Compile>
+    <Compile Include="..\GodSharp.Shared\Encryption\Hash\SHA\SHA512.cs">
+      <Link>Hash\SHA\SHA512.cs</Link>
+    </Compile>
+    <Compile Include="..\GodSharp.Shared\Encryption\Symmetric\AES.cs">
+      <Link>Symmetric\AES.cs</Link>
+    </Compile>
+    <Compile Include="..\GodSharp.Shared\Encryption\Symmetric\DES.cs">
+      <Link>Symmetric\DES.cs</Link>
+    </Compile>
+    <Compile Include="..\GodSharp.Shared\Encryption\Symmetric\TripleDES.cs">
+      <Link>Symmetric\TripleDES.cs</Link>
+    </Compile>
+    <Compile Include="..\GodSharp.Shared\Encryption\Symmetric\XES.cs">
+      <Link>Symmetric\XES.cs</Link>
+    </Compile>
+    <Compile Include="..\GodSharp.Shared\Encryption\Util\Util.cs">
+      <Link>Util\Util.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
