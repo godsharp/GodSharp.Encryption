@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace GodSharp.Encryption.Hash
+namespace GodSharp.Encryption
 {
     /// <summary>
     /// Hash/SHA1/SHA512 encryption.

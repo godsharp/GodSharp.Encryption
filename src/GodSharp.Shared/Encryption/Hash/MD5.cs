@@ -14,6 +14,7 @@ namespace GodSharp.Encryption
         /// </summary>
         /// <param name="data">The string of encrypt.</param>
         /// <param name="bit">Encrypt string bits number,only 16,32,64.</param>
+        /// <param name="encoding">The <see cref="T:System.Text.Encoding"/>,default is Encoding.UTF8.</param>
         /// <returns>Encrypt string.</returns>
         public static string Encrypt(string data, int bit=32, Encoding encoding = null)
         {
@@ -56,8 +57,9 @@ namespace GodSharp.Encryption
         /// MD5 encrypt with 16 bits.
         /// </summary>
         /// <param name="str">The string of encrypt.</param>
+        /// <param name="encoding">The <see cref="T:System.Text.Encoding"/>,default is Encoding.UTF8.</param>
         /// <returns>Encrypt string.</returns>
-        private static string Encrypt16(string str, Encoding encoding = null)
+        private static string Encrypt16(string str, Encoding encoding)
         {
             MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
 
@@ -70,8 +72,9 @@ namespace GodSharp.Encryption
         /// MD5 encrypt with 32 bits.
         /// </summary>
         /// <param name="str">The string of encrypt.</param>
+        /// <param name="encoding">The <see cref="T:System.Text.Encoding"/>,default is Encoding.UTF8.</param>
         /// <returns>Encrypt string.</returns>
-        private static string Encrypt32(string str, Encoding encoding = null)
+        private static string Encrypt32(string str, Encoding encoding)
         {
             string result = null;
 
@@ -90,8 +93,9 @@ namespace GodSharp.Encryption
         /// MD5 encrypt with 64 bits.
         /// </summary>
         /// <param name="str">The string of encrypt.</param>
+        /// <param name="encoding">The <see cref="T:System.Text.Encoding"/>,default is Encoding.UTF8.</param>
         /// <returns>Encrypt string.</returns>
-        private static string Encrypt64(string str, Encoding encoding = null)
+        private static string Encrypt64(string str, Encoding encoding)
         {
             string cl = str;
             

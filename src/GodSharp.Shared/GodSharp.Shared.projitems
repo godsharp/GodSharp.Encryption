@@ -10,14 +10,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Encryption\Asymmetric\RSA.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Encryption\Hash\Base64.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Encryption\Base64.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Encryption\Hash\HMAC\HMAC.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Encryption\Hash\HMAC\HMACMD5.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Encryption\Hash\HMAC\HMACRIPEMD160.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Encryption\Hash\HMAC\HMACSHA1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Encryption\Hash\HMAC\HMACSHA256.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Encryption\Hash\HMAC\HMACSHA384.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Encryption\Hash\HMAC\HMACSHA512.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Encryption\Hash\MD5.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Encryption\Hash\SHA\SHA.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Encryption\Hash\SHA\SHA1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Encryption\Hash\SHA\SHA256.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Encryption\Hash\SHA\SHA384.cs" />
@@ -25,8 +27,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Encryption\Symmetric\AES.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Encryption\Symmetric\DES.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Encryption\Symmetric\TripleDES.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Encryption\Symmetric\XES.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Encryption\Util\Util.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Encryption\Hash\SHA\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Encryption\Util\" />
   </ItemGroup>
 </Project>
