@@ -11,7 +11,6 @@ Common encryption method for .NET.
   - SHA384
   - SHA512
 
-
 - HMAC
   - HMACMD5
   - HMACRIPEMD160
@@ -23,8 +22,6 @@ Common encryption method for .NET.
 ## Method
 
 - Encrypt()
-
-
 
 # Symmetric Encryption Algorithm
 

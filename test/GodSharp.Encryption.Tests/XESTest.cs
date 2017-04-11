@@ -1,7 +1,5 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Threading;
-using System.Text;
 
 namespace GodSharp.Encryption.Tests
 {
