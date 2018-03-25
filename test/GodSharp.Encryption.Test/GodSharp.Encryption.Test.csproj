@@ -1,14 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <Import Project="..\..\build\common.props" />
-  <PropertyGroup>
-    <AssemblyName>GodSharp.Encryption</AssemblyName>
-    <Title>GodSharp.Encryption</Title>
-    <PackageId>GodSharp.Encryption</PackageId>
-    <PackageTags>GodSharp.Encryption,Encryption,GodSharp</PackageTags>
-    <Description>Common encryption method for .NET</Description>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(TargetFramework)'=='net35'">
-    <DefineConstants>NFX;NET35;$(AdditionalConstants)</DefineConstants>
+    <DefineConstants>NFX;NET35;</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(TargetFramework)'=='net40'">
     <DefineConstants>NFX;NET40;$(AdditionalConstants)</DefineConstants>
@@ -28,25 +21,43 @@
   <ItemGroup Condition="'$(TargetFramework)' == 'net35'">
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <PackageReference Include="xunit" Version="1.9.2" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <PackageReference Include="xunit" Version="1.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <PackageReference Include="xunit" Version="2.0.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net46'">
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <PackageReference Include="xunit" Version="2.0.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net47'">
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <PackageReference Include="xunit" Version="2.0.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+    <PackageReference Include="xunit" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+    <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\GodSharp.Encryption\GodSharp.Encryption.csproj" />
   </ItemGroup>
 </Project>

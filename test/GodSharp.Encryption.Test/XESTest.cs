@@ -1,12 +1,11 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace GodSharp.Encryption.Tests
 {
-    [TestClass]
     public class XESTest
     {
-        [TestMethod]
+        [Fact]
         public void UtilTest()
         {
             string str = null;
@@ -18,7 +17,7 @@ namespace GodSharp.Encryption.Tests
             }
         }
 
-        [TestMethod]
+        [Fact]
         public void AESTest()
         {
             string data = "hello world!";
@@ -40,7 +39,7 @@ namespace GodSharp.Encryption.Tests
             Console.WriteLine(decrypted);
         }
 
-        [TestMethod]
+        [Fact]
         public void DESTest()
         {
             string data = "hello world!";
@@ -51,7 +50,7 @@ namespace GodSharp.Encryption.Tests
             Console.WriteLine(decrypted);
         }
 
-        [TestMethod]
+        [Fact]
         public void TripleDESTest()
         {
             string data = "hello world!";

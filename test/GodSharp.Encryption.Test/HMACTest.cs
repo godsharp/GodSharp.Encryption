@@ -1,12 +1,11 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace GodSharp.Encryption.Tests
 {
-    [TestClass]
     public class HMACTest
     {
-        [TestMethod]
+        [Fact]
         public void HMACSHA1Test()
         {
             string str = "Hello world!";
@@ -20,8 +19,10 @@ namespace GodSharp.Encryption.Tests
             Console.WriteLine(encrypt);
             encrypt = HMACMD5.Encrypt(str, "123456");
             Console.WriteLine(encrypt);
+#if NFX
             encrypt = HMACRIPEMD160.Encrypt(str, "");
             Console.WriteLine(encrypt);
+#endif
         }
     }
 }

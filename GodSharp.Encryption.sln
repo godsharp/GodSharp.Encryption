@@ -1,53 +1,45 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.0
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{684FCB96-A6FC-45B4-8BE7-13C03D1F464C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{365F3D50-DBAF-4B06-BDCB-6F60E4AD2418}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{B76AC3AF-1E8E-4849-9943-67DF77651A6F}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GodSharp.Shared", "src\GodSharp.Shared\GodSharp.Shared.shproj", "{8F6E52F3-DB35-40B8-867A-AD312791BB63}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodSharp.Encryption", "src\GodSharp.Encryption\GodSharp.Encryption.csproj", "{778633B1-7023-4975-8028-EB8645CD9BA9}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{3889C1B2-746D-40F8-90F3-5F1E819DBFBB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodSharp.Encryption.Tests", "test\GodSharp.Encryption.Tests\GodSharp.Encryption.Tests.csproj", "{7DC293CD-50BB-4AAD-AF6E-9CB4DA3A2C8B}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CA928813-3446-4345-9A90-F4CD5AA4D0CF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{D94E875E-7D01-432C-B44A-95BC632D3880}"
 	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
-		appveyor.yml = appveyor.yml
-		LICENSE = LICENSE
-		README.md = README.md
+		build\common.props = build\common.props
+		build\version.props = build\version.props
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodSharp.Encryption", "src\GodSharp.Encryption\GodSharp.Encryption.csproj", "{EA23E6BF-07FA-4BA1-902D-B507A83458BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodSharp.Encryption.Test", "test\GodSharp.Encryption.Test\GodSharp.Encryption.Test.csproj", "{A552D3A1-2CCD-4B4A-8EE1-E3E721CB0FF9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{FF20D902-2537-4F14-88BE-7DDAC879E7F8}"
+EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		src\GodSharp.Shared\GodSharp.Shared.projitems*{8f6e52f3-db35-40b8-867a-ad312791bb63}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{778633B1-7023-4975-8028-EB8645CD9BA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{778633B1-7023-4975-8028-EB8645CD9BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{778633B1-7023-4975-8028-EB8645CD9BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{778633B1-7023-4975-8028-EB8645CD9BA9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7DC293CD-50BB-4AAD-AF6E-9CB4DA3A2C8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7DC293CD-50BB-4AAD-AF6E-9CB4DA3A2C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7DC293CD-50BB-4AAD-AF6E-9CB4DA3A2C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7DC293CD-50BB-4AAD-AF6E-9CB4DA3A2C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA23E6BF-07FA-4BA1-902D-B507A83458BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA23E6BF-07FA-4BA1-902D-B507A83458BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA23E6BF-07FA-4BA1-902D-B507A83458BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA23E6BF-07FA-4BA1-902D-B507A83458BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A552D3A1-2CCD-4B4A-8EE1-E3E721CB0FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A552D3A1-2CCD-4B4A-8EE1-E3E721CB0FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A552D3A1-2CCD-4B4A-8EE1-E3E721CB0FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A552D3A1-2CCD-4B4A-8EE1-E3E721CB0FF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{8F6E52F3-DB35-40B8-867A-AD312791BB63} = {3889C1B2-746D-40F8-90F3-5F1E819DBFBB}
-		{778633B1-7023-4975-8028-EB8645CD9BA9} = {684FCB96-A6FC-45B4-8BE7-13C03D1F464C}
-		{3889C1B2-746D-40F8-90F3-5F1E819DBFBB} = {684FCB96-A6FC-45B4-8BE7-13C03D1F464C}
-		{7DC293CD-50BB-4AAD-AF6E-9CB4DA3A2C8B} = {B76AC3AF-1E8E-4849-9943-67DF77651A6F}
+		{EA23E6BF-07FA-4BA1-902D-B507A83458BC} = {365F3D50-DBAF-4B06-BDCB-6F60E4AD2418}
+		{A552D3A1-2CCD-4B4A-8EE1-E3E721CB0FF9} = {FF20D902-2537-4F14-88BE-7DDAC879E7F8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB0E14D2-B1C1-4E84-B8B6-838721241758}
 	EndGlobalSection
 EndGlobal

@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using System.Text;
+
+[assembly: InternalsVisibleTo("GodSharp.Encryption.Test")]
 
 namespace GodSharp.Encryption
 {
-    public class Util
+    internal class Util
     {
         /// <summary>
         /// Get 8 bytes random string.

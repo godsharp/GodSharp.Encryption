@@ -1,17 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using GodSharp.Encryption;
+﻿using GodSharp.Encryption;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Xunit;
 
 namespace GodSharp.Encryption.Tests
 {
-    [TestClass]
     public class RSATest
     {
-        [TestMethod]
+        [Fact]
         public void CreateKeyTest()
         {
             //bool flag = RSA.CreateKey(1024, out string prik, out string pubk);

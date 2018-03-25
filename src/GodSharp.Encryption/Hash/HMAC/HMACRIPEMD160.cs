@@ -2,9 +2,10 @@
 
 namespace GodSharp.Encryption
 {
-    /// <summary>
-    /// Hash/HMAC/HMACRIPEMD160 encryption.
-    /// </summary>
+#if NFX
+/// <summary>
+/// Hash/HMAC/HMACRIPEMD160 encryption.
+/// </summary>
     public class HMACRIPEMD160:HMAC
     {
         /// <summary>
@@ -19,4 +20,5 @@ namespace GodSharp.Encryption
             return Encrypt<System.Security.Cryptography.HMACRIPEMD160>(data, key, encoding);
         }
     }
+#endif
 }

@@ -1,12 +1,11 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace GodSharp.Encryption.Tests
 {
-    [TestClass]
     public class SHATest
     {
-        [TestMethod]
+        [Fact]
         public void SHA1Test()
         {
             string str = "Hello world!";
