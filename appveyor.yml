@@ -1,4 +1,4 @@
-version: 1.0.{build}
+version: 1.0.1.{build}
 branches:
   only:
     - master
@@ -19,6 +19,8 @@ build:
   publish_nuget: false
   include_nuget_references: true
   verbosity: minimal
+artifacts:
+- path: '**\*.nupkg'
 test: off
 deploy:
 - provider: NuGet
