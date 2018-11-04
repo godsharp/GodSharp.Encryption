@@ -15,7 +15,7 @@ nuget:
   account_feed: true
   project_feed: true
 build:
-  project: src\GodSharp.Encryption\GodSharp.Encryption.csproj
+  project: GodSharp.Encryption.sln
   publish_nuget: false
   include_nuget_references: true
   verbosity: minimal

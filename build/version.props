@@ -2,7 +2,7 @@
   <PropertyGroup Condition="'$(AssemblyName)'=='GodSharp.Encryption'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>2018.4.1.0</Version>
-    <FileVersion>2018.4.1</FileVersion>
+    <FileVersion>2018.4.1.0</FileVersion>
     <DocumentationFile>$(SolutionDir)\output\$(AssemblyName)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
 </Project>
