@@ -45,6 +45,14 @@ Common encryption method for .NET.
 
 - Decrypt()
 
+generate openssl key
+
+``` bash
+openssl
+genrsa -out openssl_rsa_pri_2048.pem 2048
+rsa -in openssl_rsa_pri_2048.pem -pubout -out openssl_rsa_pub_2048.pem
+```
+
 # Base64
 
 ## Method

@@ -7,39 +7,70 @@ namespace GodSharp.Encryption
     /// <summary>
     /// Hash/HMAC encryption.
     /// </summary>
-    public abstract class HMAC
+    public class HMAC
     {
+        /// <summary>
+        /// HMAC encryption with <paramref name="type"/>.
+        /// </summary>
+        /// <param name="type">The type of encryption.</param>
+        /// <param name="data">The string to be encrypted,not null.</param>
+        /// <param name="key">Encryption key,not null.</param>
+        /// <param name="encoding">The <see cref="T:System.Text.Encoding"/>,default is <see cref="Encoding.UTF8"/>.</param>
+        /// <returns>The encrypted string.</returns>
+        public static HashResult Encrypt(HMACAlgorithmTypes type, string data, string key, Encoding encoding = null)
+        {
+            switch (type)
+            {
+                case HMACAlgorithmTypes.MD5:
+                    return EncryptResultInternal<System.Security.Cryptography.HMACMD5>(data, key, encoding);
+#if NFX
+                case HMACAlgorithmTypes.RIPEMD160:
+                    return EncryptResultInternal<System.Security.Cryptography.HMACRIPEMD160>(data, key, encoding); 
+#endif
+                case HMACAlgorithmTypes.SHA1:
+                    return EncryptResultInternal<System.Security.Cryptography.HMACSHA1>(data, key, encoding);
+                case HMACAlgorithmTypes.SHA256:
+                    return EncryptResultInternal<System.Security.Cryptography.HMACSHA256>(data, key, encoding);
+                case HMACAlgorithmTypes.SHA384:
+                    return EncryptResultInternal<System.Security.Cryptography.HMACSHA384>(data, key, encoding);
+                case HMACAlgorithmTypes.SHA512:
+                    return EncryptResultInternal<System.Security.Cryptography.HMACSHA512>(data, key, encoding);
+                default:
+                    throw new ArgumentException("Not allowed type.", nameof(type));
+            }
+        }
+
         /// <summary>
         /// HMAC encryption.
         /// </summary>
-        /// <typeparam name="T">The <see cref="T:System.Security.Cryptography.HMAC"/> sub-class.</typeparam>
         /// <param name="data">The string to be encrypted,not null.</param>
         /// <param name="key">Encryption key,not null.</param>
-        /// <param name="encoding">The <see cref="T:System.Text.Encoding"/>,default is Encoding.UTF8.</param>
+        /// <param name="encoding">The <see cref="T:System.Text.Encoding"/>,default is <see cref="Encoding.UTF8"/>.</param>
         /// <returns>The encrypted string.</returns>
-        internal static string Encrypt<T>(string data, string key,Encoding encoding=null) where T : KeyedHashAlgorithm, new()
+        internal static HashResult EncryptResultInternal<TKeyedHashAlgorithm>(string data, string key, Encoding encoding = null) where TKeyedHashAlgorithm : KeyedHashAlgorithm, new()
         {
-            if (data==null)
-            {
-                throw new ArgumentNullException(nameof(data));
-            }
-            if (key==null)
-            {
-                throw new ArgumentNullException(nameof(key));
-            }
-            if (encoding==null)
-            {
-                encoding = Encoding.UTF8;
-            }
+            return new HashResult(EncryptBytesInternal<TKeyedHashAlgorithm>(data, key, encoding), encoding);
+        }
+
+        /// <summary>
+        /// HMAC encryption.
+        /// </summary>
+        /// <param name="data">The string to be encrypted,not null.</param>
+        /// <param name="key">Encryption key,not null.</param>
+        /// <param name="encoding">The <see cref="T:System.Text.Encoding"/>,default is <see cref="Encoding.UTF8"/>.</param>
+        /// <returns>The encrypted string.</returns>
+        private static byte[] EncryptBytesInternal<TKeyedHashAlgorithm>(string data, string key, Encoding encoding = null) where TKeyedHashAlgorithm : KeyedHashAlgorithm, new()
+        {
+            ArgumentValidator.Validate(data, key);
+
+            if (encoding == null) encoding = Encoding.UTF8;
 
             byte[] keys = encoding.GetBytes(key);
             byte[] datas = encoding.GetBytes(data);
-
-            using (T hash = new T())
+            
+            using (TKeyedHashAlgorithm hash = new TKeyedHashAlgorithm() { Key = keys })
             {
-                hash.Key = keys;
-                byte[] result = hash.ComputeHash(datas);
-                return Convert.ToBase64String(result);
+                return hash.ComputeHash(datas);
             }
         }
     }
